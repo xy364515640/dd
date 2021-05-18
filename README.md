@@ -77,12 +77,42 @@ docker run -d \
 
 #e大v4部署
 ```
+#第一种，推荐docker-compose部署方法
+#在需要的目录创建docker-compose.yml文件
+
+version: "2.0"
+services:  
+  jd:    
+     image: nevinee/jd:v4    
+     container_name: jd    
+     restart: always    
+     tty: true
+     ports:     
+      - "5800:5800"    
+     network_mode: bridge    
+     hostname: jd    
+     volumes:      
+       - ./config:/jd/config      
+       - ./log:/jd/log      
+       - ./own:/jd/own      
+       - ./scripts:/jd/scripts
+       - ./panel:/jd/panel
+     environment:       
+       - ENABLE_HANGUP=false  # 是否启用挂机
+       - ENABLE_WEB_PANEL=true 
+       - ENABLE_WEB_TTYD=true 
+
+#创建好后 在此目录内执行docker-compose up -d来启动  
+
+ 
+#第二种，直接拉取 
+
 docker run -dit \
    -v /jd/config:/jd/config \
    -v /jd/log:/jd/log \
    -v /jd/scripts:/jd/scripts \
    -v /jd/own:/jd/own \
-   -p 5678:5678 \
+   -p 5800:5800 \
    -e ENABLE_HANGUP=true \
    -e ENABLE_WEB_PANEL=true \
    -e ENABLE_WEB_TTYD=true \
