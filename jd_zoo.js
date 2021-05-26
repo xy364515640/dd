@@ -20,17 +20,13 @@ let cookiesArr = [], cookie = '',secretp = '',shareCodeList = [],showCode = true
 let doPkSkill = true;  //自动放技能，不需要的改为false
 //商圈码
 shareCodeList = [
-  'sSKNX-MpqKPS7La7npvQBccn4VAPlr9mb8aci5H4NnUXWkJrAQ12DME',
-  'sSKNX-MpqKOTuPH8xoXcBjhIEAnR0n-WVo2Ce3SkSg8X3YwjtdX0',
-  'sSKNX-MpqKOJsNu9mc3bVnj4eV74Z7q_n_unCfPtUPJXXqWtGGB9pZoPSaYgD3A',
-  'sSKNX-MpqKOA5bG-mpLQDPI5a3R6_El8NCZQa9271ofm8j2WsfRk'
+  'sSKNX-MpqKPQ5b26nJ3dBK4gsfF-xFFs2kU0tjWADrq_c10eYQJWKgVX4jYk',
+  'sSKNX-MpqKMGWBNtHhwNjS86c4hnF4FXpXeIISx9Am7mDBfHqRqF-kX59UMX',
 ];
 //个人码
 inviteIdList = [
-'ZXTKT018v_VxQxkZ_FXVJBqb1AFjRWn6-7zx55awQ',
-'ZXTKT016_qE2BEEH8FbWKHWpFjRWn6-7zx55awQ',
-'ZXTKT0225KkcRR5P9waCJBzzkPRcJwFjRWn6-7zx55awQ',
-'ZXTKT0167fx2Rh0Q_FzSIBn1FjRWn6-7zx55awQ'
+'ZXTKT020vfx6Qhsf8VTKJBL1kPUDFjRWn6-7zx55awQ',
+'ZXTKT020a0HUlZmeId169Zp6QVGPFjRWn6-7zx55awQ',
 ];
 const JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 !(async () => {
